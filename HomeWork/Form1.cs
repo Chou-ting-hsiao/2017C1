@@ -21,13 +21,23 @@ namespace HomeWork
 
         private void button1_Click(object sender, EventArgs e)
         {
-            report();
+            if (textBox1.Text==""|textBox2.Text=="")
+            {
+                MessageBox.Show("資料不完整，無法計算");
+            }
+            else
+            {
+                report();
+            }
+
+
+           
         }
 
         public void report()
         {
-            _bmi.Weight = int.Parse(textBox1.Text);
-            _bmi.Height = int.Parse(textBox2.Text);
+            _bmi.Weight = double.Parse(textBox1.Text);
+            _bmi.Height = double.Parse(textBox2.Text);
             if (_bmi.BMI < 18.5)
             {
                 MessageBox.Show("您的BMI為:"+ _bmi.BMI.ToString()+ Environment.NewLine + "BMI評估:過輕");
@@ -56,6 +66,22 @@ namespace HomeWork
 
         }
 
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
 
+            if (((int)e.KeyChar < 48 | (int)e.KeyChar > 57) & (int)e.KeyChar != 8 & (int)e.KeyChar !=46 | e.KeyChar == '.' & (sender as TextBox).Text.IndexOf('.') >-1)//如果ASCII編碼不是數字
+            {
+                if (e.KeyChar == '.')
+                {
+                    TextBox tb1 = (TextBox)sender;
+                    tb1.Text = tb1.Text;
+                }
+              
+                e.Handled = true;
+              
+            }
+        
+        }
     }
 }
