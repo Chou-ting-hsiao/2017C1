@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCaculator1", "SimpleC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simplecaculator", "simplecaculator\simplecaculator.csproj", "{6A84AFEA-6977-4136-B216-D9AC48CB556C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator3", "SimpleCalculator3\SimpleCalculator3.csproj", "{754E765A-D9FF-4D2A-A757-74B805953FCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork", "HomeWork\HomeWork.csproj", "{B74A45EB-57DD-4168-B716-8F53B26476B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{6A84AFEA-6977-4136-B216-D9AC48CB556C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A84AFEA-6977-4136-B216-D9AC48CB556C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A84AFEA-6977-4136-B216-D9AC48CB556C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754E765A-D9FF-4D2A-A757-74B805953FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754E765A-D9FF-4D2A-A757-74B805953FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754E765A-D9FF-4D2A-A757-74B805953FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754E765A-D9FF-4D2A-A757-74B805953FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B74A45EB-57DD-4168-B716-8F53B26476B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B74A45EB-57DD-4168-B716-8F53B26476B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B74A45EB-57DD-4168-B716-8F53B26476B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B74A45EB-57DD-4168-B716-8F53B26476B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
