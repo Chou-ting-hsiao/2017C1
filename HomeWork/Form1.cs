@@ -68,7 +68,14 @@ namespace HomeWork
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+
+           
+             if (e.KeyChar == '.' & (sender as TextBox).Text.IndexOf('.') == -1)
+            {
+                TextBox tb1 = (TextBox)sender;
+                tb1.Text ="0.";
+            }
+
 
             if (((int)e.KeyChar < 48 | (int)e.KeyChar > 57) & (int)e.KeyChar != 8 & (int)e.KeyChar !=46 | e.KeyChar == '.' & (sender as TextBox).Text.IndexOf('.') >-1)//如果ASCII編碼不是數字
             {
