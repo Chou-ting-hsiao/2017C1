@@ -58,22 +58,15 @@ namespace HomeWork002
             {
               
                 string item = (string)listBox1.SelectedItem;
-                if (item == "農夫")
+                _leftList.Remove("農夫");
+                _rightList.Add("農夫");
+                if (item != "農夫")
                 {
-                    _leftList.Remove("農夫");
-                    _rightList.Add("農夫");
-                    ChangeData();
-                }
-                 if (item != "農夫")
-                {
-                   
-                    _leftList.Remove("農夫");
-                    _rightList.Add("農夫");
                     _leftList.Remove(item);
                     _rightList.Add(item);
-                    ChangeData();
                 }
-
+              
+                ChangeData();
                 button1.Enabled = false;
                 button2.Enabled = true;
                 Check();
@@ -89,22 +82,14 @@ namespace HomeWork002
             if (listBox2.SelectedItem != null)
             {
                 string item = (string)listBox2.SelectedItem;
-                if (item == "農夫")
-                {
-                    _rightList.Remove("農夫");
-                    _leftList.Add("農夫");
-                    ChangeData();
-                }
+                _rightList.Remove("農夫");
+                _leftList.Add("農夫");
                 if (item != "農夫")
                 {
-                    _rightList.Remove("農夫");
-                    _leftList.Add("農夫");
                     _rightList.Remove(item);
                     _leftList.Add(item);
-                    ChangeData();
                 }
-
-
+                ChangeData();
                 Check();
                 button2.Enabled = false;
                 button1.Enabled = true;
@@ -121,7 +106,7 @@ namespace HomeWork002
                   
                     Re();
                 }
-                else if (_leftList.Contains("菜")  && _leftList.Contains("羊"))
+                else if (_leftList.Contains("菜")&& _leftList.Contains("羊"))
                 {
                     MessageBox.Show("菜被羊吃");
                    
