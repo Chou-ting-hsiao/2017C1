@@ -18,7 +18,7 @@ namespace HomeWork003
         {
             InitializeComponent();
             list = CreateData();
-            setgdv(list);
+            dataGridView1.DataSource = list;
         }
         private List<phone> CreateData()
         {
@@ -47,29 +47,26 @@ namespace HomeWork003
 
         }
 
-        private  void setgdv(List<phone> list1)
-        {
-            dataGridView1.DataSource = list1;
-        }
+      
         private void button1_Click(object sender, EventArgs e)
         {
             var search = list.Where((x) => x.Tel == textBox1.Text);
-            
-           /* List<phone> result = new List<phone>();
-            foreach (var item in search)
-            {
-                var phone = new phone
-                {
-                    Seq = item.Seq,
-                    Name = item.Name,
-                    Tel = item.Tel,
-                    Address = item.Address
-                };
-                result.Add(phone);
-                // MessageBox.Show(item.Seq+","+item.Name + "," + item.Tel + "," + item.Address);
-            }
-            */
-            setgdv(search.ToList());
+
+            /* List<phone> result = new List<phone>();
+             foreach (var item in search)
+             {
+                 var phone = new phone
+                 {
+                     Seq = item.Seq,
+                     Name = item.Name,
+                     Tel = item.Tel,
+                     Address = item.Address
+                 };
+                 result.Add(phone);
+                 // MessageBox.Show(item.Seq+","+item.Name + "," + item.Tel + "," + item.Address);
+             }
+             */
+            dataGridView1.DataSource = search.ToList();
         }
     }
 }
